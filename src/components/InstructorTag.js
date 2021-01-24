@@ -3,9 +3,10 @@ const InstructorTag = (props) => {
 
   return (
     <div>
-      <span>{props.Instructors.emoji}</span>
-      <span>{props.Instructors.name}</span>
-      <span>{props.Instructors.github}</span>
+      <span>{props.emoji}</span>
+
+      <span>{props.name}</span>
+      <span>{props.github}</span>
     </div>
   );
 };

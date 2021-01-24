@@ -1,23 +1,26 @@
 import "./App.css";
 import Instructors from "./InstructorsData";
 import InstructorTag from "./components/InstructorTag";
+import "./components/styles";
+import { AppWrapper } from "./components/styles";
+import { ThemeProvider } from "styled-components";
 
-const tutors = Instructors.map((tutor) => {
-  return (
-    <InstructorTag
-      key={tutor.id}
-      emoju={tutor.emoji}
-      name={tutor.name}
-      github={tutor.github}
-    />
-  );
-});
 const App = () => {
+  const tutors = Instructors.map((tutor) => {
+    return (
+      <InstructorTag
+        key={tutor.id}
+        emoji={tutor.emoji}
+        name={tutor.name}
+        github={tutor.github}
+      />
+    );
+  });
   return (
-    <div className="AppWrapper">
-      <h2>When in doubt, ask for help!</h2>
-      <div>{tutors}</div>
-    </div>
+    <AppWrapper>
+      <h2></h2>
+      <TagWrapper>{tutors}</TagWrapper>
+    </AppWrapper>
   );
 };
 
